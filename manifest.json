@@ -26,8 +26,8 @@
       "sizes": "384x384",
       "type": "image/png"
     }, {
-      "src": "img/nutri512.png",
-      "sizes": "512x512",
+      "src": "img/nutri72.png",
+      "sizes": "72x72",
       "type": "image/png"
     }]
   }

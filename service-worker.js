@@ -8,6 +8,8 @@ const CACHE_DINAMIC = 'dynamic-cache';
 const FILES_TO_CACHE = [
   'index.html',
   'dietas.html',
+  'graficas.html',
+  'pacientes.html',
   'rutinas.html',
   'fotos.html',
   'css/bootstrap.css',

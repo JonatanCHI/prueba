@@ -27,7 +27,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-expand-lg btn-lg">
         <div class="container">
-            <a class="navbar-brand mb-0 h1" href="pacientes.html">Pacientes</a>
+            <a class="navbar-brand mb-0 h1" href="dietas.html">Dietas</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -37,7 +37,7 @@
                 <div class="flex">
                     <ul class="navbar-nav  mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="dietas.html">Dietas</a>
+                            <a class="nav-link" href="graficas.html">Graficas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="rutinas.html">Rutinas</a>
@@ -47,11 +47,8 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="fotos.html">fotos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="graficas.html">Graficas</a>
-                        </li>
 
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -92,11 +89,34 @@
 
             <li class="list-group-item d-flex justify-content-between align-items-start">
                 <div class="ms-2 me-auto">
-                    <div class="fw-bold">Nombre: Jose Ek</div>Peso: 60
+                    <div class="fw-bold"> Carlos Ek</div>Peso: 60 kg
+                    <div class="fw-bold"> Javier Ek</div>Peso: 93 kg
+                    <div class="fw-bold"> Juan Ek</div>Peso: 89 kg
+                    <div class="fw-bold"> Gabriel Ek</div>Peso: 80 kg
+                    <div class="fw-bold"> Alonso Ek</div>Peso: 70 kg
+                    <div class="fw-bold"> Sergio Ek</div>Peso: 90 kg
                 </div>
-                <a class="btn" data-bs-toggle="collapse" href="#collapseFoto1" role="button" aria-expanded="false" aria-controls="collapseFoto1"><i class="fas fa-camera-retro fa-lg"></i></a>
-                <a class="btn" href="#"><i class="fas fa-edit fa-lg"></i></a>
-                <a class="btn" href="#"><i class="fas fa-trash-alt text-danger fa-lg"></i></a>
+                
+                          
+<p>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <div id="plotlyChart"></div>
+    <script>
+          var data = [
+            {
+              x: ['enero', 'febrero', 'marzo', 'abril'],
+              y: [60, 24, 53, 16],
+              type: 'bar'
+            }
+          ];
+          
+    
+          Plotly.newPlot('plotlyChart', data);
+          
+    </script>
+                   
+</p>
+               
             </li>
 
             <div class="collapse" id="collapseFoto1">
@@ -109,58 +129,29 @@
                 </footer>
             </div>
 
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                    <div class="fw-bold">Nombre: Jose Canul</div>
-                    Peso: 70
-                </div>
-                <a class="btn" data-bs-toggle="collapse" href="#collapseFoto2" role="button" aria-expanded="false" aria-controls="collapseFoto2" ><i
-                        class="fas fa-camera-retro fa-lg"></i></a>
-                <a class="btn" href="#"><i class="fas fa-edit fa-lg"></i></a>
-                <a class="btn" href="#"><i class="fas fa-trash-alt text-danger fa-lg"></i></a>
-            </li>
-
-            <div class="collapse" id="collapseFoto2">
-                <input type="file" accept="image/*" capture="camera" id="camera1" class="inputget">
-                <div class="container-photo">
-                    <img id="photo1" class="img-fluid w-100 mx-auto d-block float-start">
-                </div>
-                <footer class="footer">
-                    <button id="open1" type="button" class="btn icon fas fa-camera-retro"></button>
-                </footer>
-            </div>
+          
+            
 
 
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                    <div class="fw-bold">Nombre: Raul Hernadez</div>
-                    Peso: 77
-                </div>
-                <a class="btn" data-bs-toggle="collapse" href="#collapseFoto3" role="button" aria-expanded="false" aria-controls="collapseFoto3"><i
-                        class="fas fa-camera-retro fa-lg"></i></a>
-                <a class="btn" href="#"><i class="fas fa-edit fa-lg"></i></a>
-                <a class="btn" href="#"><i class="fas fa-trash-alt text-danger fa-lg"></i></a>
-            </li>
+            
+ 
+           
 
-
-            <div class="collapse" id="collapseFoto3">
-                <input type="file" accept="image/*" capture="camera" id="camera2" class="inputget">
-                <div class="container-photo">
-                    <img id="photo2" class="img-fluid w-100 mx-auto d-block float-start">
-                </div>
-                <footer class="footer">
-                    <button id="open2" type="button" class="btn icon fas fa-camera-retro"></button>
-                </footer>
-            </div>
-
-
+           
+        
+    
 
         </ul>
+        
 
-        <div class="d-grid gap-2 boton-flotante">
-            <button type="button" class="btn btn-primary btn-lg boton-flotante-centro" data-bs-toggle="modal"
-                data-bs-target="#modalPacientes">AGREGAR</button>
+        <div>
+
+             
+            
         </div>
+        
+
+        
     </div>
 
 
@@ -168,6 +159,21 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/app.js"></script>
 
+    
+
+
+
+<li>
+
+
+    
+</li>
+
+
+
+
 </body>
+
+
 
 </html>

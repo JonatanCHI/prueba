@@ -27,7 +27,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-expand-lg bg-lg">
         <div class="container">
-            <a class="navbar-brand mb-0 h1" href="dietas.html">Pacientes</a>
+            <a class="navbar-brand mb-0 h1" href="rutinas.html">Rutinas</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -51,11 +51,11 @@
     <div class="container">
         <h1 class="mt-3">Lista Rutinas</h1>
         <hr>
-        <div class="modal fade" id="modalPacientes" tabindex="-1" aria-labelledby="infoPacientes" aria-hidden="true">
+        <div class="modal fade" id="modalRutinas" tabindex="-1" aria-labelledby="infoRutinas" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen-sm-down">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="infoPacientes">Información de Pacientes</h5>
+                        <h5 class="modal-title" id="infoRutinas">Información Rutinas</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -132,16 +132,54 @@
                 <a class="btn" href="#"><i class="fas fa-trash-alt text-danger fa-lg"></i></a>
             </li>
 
+<li> </li>
+            <input type="file" accept="image/*" capture="camera" id="camera" class="inputget">
+    <header class="header">Menu Tratamiento Pacientes A</header>
+    <div class="container-photo">
+      <img id="photo" class="photo">
+    </div>
+    <footer class="footer">
+      <button id="open" type="button" class="btn icon fas fa-camera-retro"></button>
+    </footer>
 
-            <div class="collapse" id="collapseFoto3">
-                <input type="file" accept="image/*" capture="camera" id="camera2" class="inputget">
-                <div class="container-photo">
-                    <img id="photo2" class="img-fluid w-100 mx-auto d-block float-start">
-                </div>
-                <footer class="footer">
-                    <button id="open2" type="button" class="btn icon fas fa-camera-retro"></button>
-                </footer>
-            </div>
+   
+
+
+<script src="js/bootstrap.js"></script>
+<script>
+
+window.onload = function(e){ 
+
+// Declare init HTML elements
+const camera = document.querySelector('#camera');
+const photo = document.querySelector('#photo');
+const open = document.querySelector('#open');
+
+// Event to active input type file
+open.addEventListener('click', function(){
+  camera.click();
+});
+
+// Event on change content type file
+camera.addEventListener('change', function(e) {
+  // Create url object and show Photo from BLOB Object.
+  photo.src = URL.createObjectURL(e.target.files[0]);
+
+  // Create Http Request Instance.
+  const xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) console.log(xhttp.responseText);
+  };
+  // Create Data Form Instance.
+  const formData = new FormData();
+  // Add blob object into instance.
+  formData.append("photo", e.target.files[0]);
+  // Open and send data to endpoint /upload
+  xhttp.open('POST', window.location.href + 'upload', true);
+  xhttp.send(formData);
+});
+}
+</script>
 
 
 
@@ -149,8 +187,8 @@
 
         <div class="d-grid gap-2 boton-flotante">
             <button type="button" class="btn btn-primary btn-lg boton-flotante-centro" data-bs-toggle="modal"
-                data-bs-target="#modalPacientes">AGREGAR</button>
+                data-bs-target="#modalRutinas">AGREGAR</button>
         </div>
     </div>
-
+</body>
 </html>
